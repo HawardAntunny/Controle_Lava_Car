@@ -36,6 +36,15 @@ function parseValor(valor) {
 fetch(`${API_URL}?action=clientes`)
   .then(res => res.json())
   .then(clientes => {
+    // Ordenar em ordem alfabética (ignorando acentos e maiúsculas)
+    clientes.sort((a, b) =>
+      a.nome.normalize("NFD").replace(/[\u0300-\u036f]/g, "").localeCompare(
+        b.nome.normalize("NFD").replace(/[\u0300-\u036f]/g, ""),
+        'pt',
+        { sensitivity: 'base' }
+      )
+    );
+
     clientes.forEach(cli => {
       const opt = document.createElement('option');
       opt.value = cli.nome;
@@ -43,6 +52,7 @@ fetch(`${API_URL}?action=clientes`)
       clienteSelect.appendChild(opt);
     });
   });
+
 
 // 📌 Ao selecionar cliente, busca modelo e valores dos serviços
 clienteSelect.addEventListener('change', async () => {
