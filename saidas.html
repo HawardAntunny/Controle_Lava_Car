@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registro de Saídas</title>
+  <link href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" rel="stylesheet">
+</head>
+<body>
+  <script>
+    if (window.location.pathname !== '/index.html' && performance.navigation.type === 1) {
+      window.location.href = 'index.html';
+    }
+  </script>
+
+  <nav class="container-fluid">
+    <ul>
+      <li><strong>Estética Automitiva Painel</strong></li>
+    </ul>
+    <ul>
+      <li><a href="index.html">Início</a></li>
+      <li><a href="lancamentos.html">Lançamentos</a></li>
+      <li><a href="cadastro-clientes.html">Clientes</a></li>
+      <li><a href="cadastro-carros.html">Carros</a></li>
+      <li><a href="saidas.html">Saídas</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <h2>Registro de Saídas</h2>
+    <form id="formSaida">
+      <label>Valor da Saída (R$):
+        <input type="number" id="valor_saida" name="valor_saida" required>
+      </label>
+
+      <label>Motivo:
+        <input type="text" id="motivo" name="motivo" required>
+      </label>
+
+      <label>Forma de Pagamento:
+        <select id="forma_pagamento" name="forma_pagamento" required>
+          <option value="PIX">PIX</option>
+          <option value="Dinheiro">Dinheiro</option>
+          <option value="Cartão">Cartão</option>
+          <option value="Transferência">Transferência</option>
+        </select>
+      </label>
+
+      <label>Responsável:
+        <input type="text" id="responsavel" name="responsavel" required>
+      </label>
+
+      <label>Observações:
+        <textarea id="obs" name="obs"></textarea>
+      </label>
+
+      <!-- Aqui está a data preenchida automaticamente via JS -->
+      <input type="hidden" id="data_saida" name="data_saida">
+
+      <button type="submit">Registrar Saída</button>
+    </form>
+  </main>
+
+  <footer class="container">
+    <small><a href="#">© 2025 Alpha Detailing</a></small>
+     <small style="color: #666;">By Américo, HAS</small>
+  </footer>
+
+  <script src="js/saidas.js"></script>
+</body>
+</html>

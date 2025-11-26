@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alpha Detailing</title>
+  <link href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background-color: #121212;
+      color: #e0e0e0;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .logo-container img {
+      max-width: 500px;
+      width: 100%;
+      height: auto;
+      margin-bottom: 3rem;
+    }
+
+    .grid-icons {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .grid-icons a {
+      background-color: #1e1e1e;
+      padding: 1rem;
+      border-radius: 8px;
+      text-decoration: none;
+      color: #fff;
+      border: 1px solid #333;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .grid-icons a:hover {
+      background-color: #333;
+      transform: scale(1.05);
+    }
+
+    .grid-icons img {
+      width: 120px;
+      height: 120px;
+      margin-bottom: 0.75rem;
+      object-fit: contain;
+    }
+
+    .grid-icons span {
+      margin-top: 0.25rem;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    footer {
+      margin-top: 4rem;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <div class="logo-container">
+      <img src="img/logo.png" alt="Logo Alpha Detailing">
+    </div>
+
+    <div class="grid-icons">
+      <a href="lancamentos.html">
+        <img src="img/lancamento.png" alt="Lançamentos">
+        <span>Lançamentos</span>
+      </a>
+      <a href="cadastro-clientes.html">
+        <img src="img/clientes.png" alt="Clientes">
+        <span>Clientes</span>
+      </a>
+      <a href="cadastro-carros.html">
+        <img src="img/modelos.png" alt="Carros">
+        <span>Carros</span>
+      </a>
+      <a href="saidas.html">
+        <img src="img/saidas.png" alt="Saídas">
+        <span>Saídas</span>
+      </a>
+    </div>
+  </main>
+
+  <footer class="container">
+    <small>© 2025 Alpha Detailing</small>
+    <small style="color: #666;">By Américo, HAS</small>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cadastro de Modelos de Carro</title>
+  <link href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" rel="stylesheet" />
+</head>
+<body>
+  <script>
+    if (window.location.pathname !== '/index.html' && performance.navigation.type === 1) {
+      window.location.href = 'index.html';
+    }
+  </script>
+
+  <nav class="container-fluid">
+    <ul>
+      <li><strong>Estética Automotiva Painel</strong></li>
+    </ul>
+    <ul>
+      <li><a href="index.html">Início</a></li>
+      <li><a href="lancamentos.html">Lançamentos</a></li>
+      <li><a href="cadastro-clientes.html">Clientes</a></li>
+      <li><a href="cadastro-carros.html">Carros</a></li>
+      <li><a href="saidas.html">Saídas</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <h2>Cadastro de Modelo de Carro</h2>
+    <form id="formModelo">
+      <label>Modelo do Carro:
+        <input type="text" id="modelo" name="modelo" required />
+      </label>
+
+      <label>Tamanho:
+        <select id="tamanho" name="tamanho" required>
+          <option value="">Selecione o tamanho</option>
+          <option value="P">P</option>
+          <option value="M">M</option>
+          <option value="G">G</option>
+          <option value="GG">GG</option>
+        </select>
+      </label>
+
+      <label>Valor Lavagem Convencional:
+        <input type="number" id="convencional" name="convencional" required />
+      </label>
+
+      <label>Valor Lavagem Aparência:
+        <input type="number" id="aparencia" name="aparencia" required />
+      </label>
+
+      <label>Valor Lavagem Convencional com Cera:
+        <input type="number" id="convencionalcera" name="convencionalcera" required />
+      </label>
+
+      <button type="submit">Cadastrar Modelo</button>
+    </form>
+  </main>
+
+  <footer class="container">
+    <small><a href="#">© 2025 Alpha Detailing</a></small>
+     <small style="color: #666;">By Américo, HAS</small>
+  </footer>
+
+  <script src="js/cadastro-carros.js"></script>
+</body>
+</html>

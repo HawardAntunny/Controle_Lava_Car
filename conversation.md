@@ -1,0 +1,1 @@
+Usuário quer um site bonito e funcional, que puxa dados da planilha do Google Sheets (clientes, modelos, valores, serviços), calcula automaticamente descontos em valor ou %, e envia para a aba lançamentos. Script já implantado.
